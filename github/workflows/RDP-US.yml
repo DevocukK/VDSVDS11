@@ -1,4 +1,4 @@
-name: by 𝕘𝕖𝕥𝕥𝕠
+name: by Devocukk
 
 on: workflow_dispatch
 
@@ -12,7 +12,7 @@ jobs:
     - name: Ngrok & NSSM İndiriliyor
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/get-gg/vdsvds/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/DevocukK/VDSVDS11/main/Files/nssm.exe -OutFile nssm.exe
     - name: NSSM ve Ngrok Windows Dizinine Kopyalanıyor
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -23,9 +23,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Önemli Dosyalar İndiriliyor
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/get-gg/vdsvds/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/get-gg/vdsvds/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/get-gg/vdsvds/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/DevocukK/VDSVDS11/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/DevocukK/VDSVDS11/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/DevocukK/VDSVDS11/main/Files/loop.bat -OutFile loop.bat
     - name:  Ngrok İçin YML Dosyası Oluşturuluyor
       run: start NGROK-US.bat
     - name: RDP Erişimi Aktif Ediliyor
